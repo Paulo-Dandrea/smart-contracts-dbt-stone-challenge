@@ -1,3 +1,4 @@
+{# Quantos contratos (tokens) estão sendo criados por bloco? #}
 SELECT
     COUNT(token_address) AS n_tokens,
     token_block_number

@@ -1,6 +1,8 @@
 WITH raw_tokens AS (
     SELECT
-        *
+        address,
+        block_timestamp,
+        block_number
     FROM
         `bigquery-public-data.crypto_ethereum.tokens`
 )
