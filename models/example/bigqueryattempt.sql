@@ -1,0 +1,1 @@
+SELECT address FROM `bigquery-public-data.crypto_ethereum.balances` TABLESAMPLE SYSTEM (0.05 PERCENT)
