@@ -1,4 +1,4 @@
-WITH raw_tokens AS (
+WITH raw_blocks AS (
     SELECT
         TIMESTAMP,
         NUMBER,
@@ -15,4 +15,4 @@ SELECT
     gas_used AS block_gas_used,
     transaction_count AS block_transaction_count
 FROM
-    raw_tokens
+    raw_blocks
