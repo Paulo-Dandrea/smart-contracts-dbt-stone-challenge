@@ -2,9 +2,7 @@ WITH raw_tokens AS (
     SELECT
         *
     FROM
-        `bigquery-public-data.crypto_ethereum.tokens` tablesample system (
-            0.05 percent
-        )
+        `bigquery-public-data.crypto_ethereum.tokens`
 )
 SELECT
     address AS token_address,
