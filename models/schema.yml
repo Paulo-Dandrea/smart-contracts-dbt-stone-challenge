@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fct_blocks_inner_joined_by_tokens
+    columns:
+      - name: token_address
+        tests:
+          - not_null
+
+      - name: token_block_number
+        tests:
+          - not_null
+
+      - name: token_block_date
+        tests:
+          - not_null
+
+  - name: fct_blocks_cleansed
+    columns:
+      - name: block_number
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_tokens_cleansed
+    columns:
+      - name: token_address
+        tests:
+          - not_null
+      - name: token_block_number
+        tests:
+          - relationships:
+              to: ref('fct_blocks_cleansed')
+              field: block_number
