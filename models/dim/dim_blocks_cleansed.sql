@@ -2,10 +2,7 @@
 SELECT
     DATE(block_timestamp) AS block_date,
     block_number,
-    block_size,
-    block_gas_used,
-    block_transaction_count
+    block_gas_used
 FROM
     {{ ref('src_blocks') }}
-
-{# TODO: Apagar no source colunas não usadas #}
+    {# TODO: Apagar no source colunas não usadas #}
