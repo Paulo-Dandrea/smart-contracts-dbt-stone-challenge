@@ -1,12 +1,11 @@
-{# Aqui deveria mesmo ser um Mart? Se fosse uma Mart, devereria ser um view? 
- #}
+{# Aqui deveria mesmo ser um Mart? Se fosse uma Mart, devereria ser um view?  #}
 
 SELECT
     COUNT(block_number) AS total_blocks,
-    DATE(block_timestamp) AS DATE
+    block_date
 FROM
     {{ ref('dim_blocks_cleansed') }}
 GROUP BY
-    DATE
+    block_date
 ORDER BY
     total_blocks DESC
