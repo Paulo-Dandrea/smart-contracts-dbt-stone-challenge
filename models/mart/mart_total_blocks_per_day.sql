@@ -4,7 +4,7 @@ SELECT
     COUNT(block_number) AS total_blocks,
     block_date
 FROM
-    {{ ref('dim_blocks_cleansed') }}
+    {{ ref('fct_blocks_cleansed') }}
 GROUP BY
     block_date
 ORDER BY

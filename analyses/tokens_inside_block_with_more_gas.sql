@@ -8,7 +8,7 @@ WITH ranked_by_gas AS (
                 block_gas_used DESC
         ) gas_rank
     FROM
-        {{ ref('dim_blocks_inner_joined_by_tokens') }}
+        {{ ref('fct_blocks_inner_joined_by_tokens') }}
 )
 SELECT
     *
