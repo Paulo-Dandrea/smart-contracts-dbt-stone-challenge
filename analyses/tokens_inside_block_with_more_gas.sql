@@ -1,3 +1,5 @@
+{# 4 - Qual o bloco que gerou contratos (tokens) e utilizou mais taxa (gas)? Informar o nome
+de todos os tokens contidos neste bloco #}
 WITH ranked_by_gas AS (
     SELECT
         block_number,
