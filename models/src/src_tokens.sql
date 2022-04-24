@@ -1,4 +1,4 @@
-{# Normalmente, acredito, um source deve passar todas as colunas. Mas não quis gastar minhas quotas :D #}
+{# Normalmente, acredito, um source deve passar * (todas as colunas). Mas não quis gastar minhas quotas :D #}
 
 WITH raw_tokens AS (
     SELECT
