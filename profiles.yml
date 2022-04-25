@@ -1,0 +1,10 @@
+my-bigquery-db:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: bq-demo-342815
+      dataset: eth_challenge
+      threads: 4
+      keyfile: /home/dandrea/Desktop/bq-demo-342815-694c5704d8ab.json
