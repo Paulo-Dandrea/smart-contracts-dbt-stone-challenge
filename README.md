@@ -6,9 +6,11 @@ Além de entregar as queries que respondem as perguntas, me aprofundei no que **
 
 Neste Readme, vou tentar organizar por questão o que está nos códigos.
 
+Então, vamos às "Perguntas que gostaríamos de responder com nossas tabelas".
 
-### Perguntas que gostaríamos de responder com nossas tabelas:
-> Quantos contratos (tokens) estão sendo criados por bloco?
+
+---
+### 1. Quantos contratos (tokens) estão sendo criados por bloco?
 
 Na tabela `crypto_ethereum.tokens`, existe a coluna `block_number`, que tem seu correspondente em `crypto_ethereum.blocks`. Acredito que se agruparmos por `block_number` e contarmos (`count()`), por exemplo, os `token_adresses`, temos a quantidade de tokens por bloco.
 
@@ -27,6 +29,11 @@ Esta tabela acima, por sua vez, consome da **efêmera** `source_tokens`. Nela, a
 Temos a tabela `fct_tokens_cleansed` documentada e testada. Teste como 'not_null' e teste de relação com outra tabela. `models/schema.yml`
 
 ![image](https://user-images.githubusercontent.com/37453518/165186887-d8794d3a-0ae8-4013-89f2-2436b16a5c54.png)
+
+**Resultado:**
+
+![image](https://user-images.githubusercontent.com/37453518/165187359-821998b1-9b45-45e0-ad7d-da0e0183c7a5.png)
+
 
 
 
