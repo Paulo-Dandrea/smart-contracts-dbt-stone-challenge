@@ -20,7 +20,7 @@ Que tem como referência uma **tabela fato**, **incremental**, que apenas atuali
 
 ![image](https://user-images.githubusercontent.com/37453518/165186538-66d8cd9b-385e-4212-8723-db78f6f9aca6.png)
 
-Esta tabela acima, por sua vez, consome da **êfemera** `source_tokens`. Nela, alteramos os nomes de colunas e, nesta proposta, também só passamos as colunas que nos interessa. `models/src/src_tokens.sql`:
+Esta tabela acima, por sua vez, consome da **efêmera** `source_tokens`. Nela, alteramos os nomes de colunas e, nesta proposta, também só passamos as colunas que nos interessa. `models/src/src_tokens.sql`:
 
 ![image](https://user-images.githubusercontent.com/37453518/165186671-860d16f6-8607-4253-851b-695d5f1585db.png)
 
