@@ -10,6 +10,7 @@ models:
       - name: token_block_number
         tests:
           - not_null
+          - positive_value
 
       - name: token_block_date
         tests:
@@ -21,6 +22,8 @@ models:
         tests:
           - unique
           - not_null
+
+      - name: block_gas_used
 
   - name: fct_tokens_cleansed
     columns:
