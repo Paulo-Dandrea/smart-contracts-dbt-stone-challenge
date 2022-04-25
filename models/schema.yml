@@ -1,34 +1,40 @@
 version: 2
 
 models:
-  - name: fct_blocks_inner_joined_by_tokens
+  - name: fct_tokens_cleansed
+    description: Tokens fact table updated incrementally.
     columns:
       - name: token_address
+        description: The address of the ERC20 token
         tests:
           - not_null
-
       - name: token_block_number
+        description: Block number where this token was created. Related with block_number of block table.
         tests:
-          - not_null
-
+          - relationships:
+              to: ref('fct_blocks_cleansed')
+              field: block_number
       - name: token_block_date
-        tests:
-          - not_null
+        description: Date of the block where this token was created
 
   - name: fct_blocks_cleansed
+    description: Blocks fact table updated incrementally.
     columns:
       - name: block_number
         tests:
           - unique
           - not_null
+          - positive_value # Test inside macros folder
 
-  - name: fct_tokens_cleansed
-    columns:
-      - name: token_address
+      - name: block_gas_used
+        description: The total used gas by all transactions in this block.
         tests:
           - not_null
-      - name: token_block_number
+      - name: block_date
+        description: Date of the block.
         tests:
-          - relationships:
-              to: ref('fct_blocks_cleansed')
-              field: block_number
+          - not_null
+
+  - name: fct_blocks_inner_joined_by_tokens
+    description: Blocks and tokens tables joined on block_number
+
