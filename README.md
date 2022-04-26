@@ -92,3 +92,9 @@ Como estou usando DBT, optei por usar **DBT Cloud** para o agendamento. Na segun
 ![image](https://user-images.githubusercontent.com/37453518/165180682-81fbbaef-1211-456a-93f2-2c1407a02e57.png)
 
 ![image](https://user-images.githubusercontent.com/37453518/165180943-77ad717e-fd1e-400f-afc6-684aadde0623.png)
+
+---
+
+Obviamente, não estou convicto de todas as escolhas, então, estou aberto à todas sugestões. Mas, espero que gostem!
+
+Paulo
