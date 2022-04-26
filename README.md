@@ -1,12 +1,11 @@
 Bem vindo à entrega do desafio do time de dados tratados.
 
-### Proposta para entrega
+## Proposta para entrega
 
 Além de entregar as queries que respondem as perguntas, me aprofundei no que **me parece** fazer parte da rotina do pessoal de dados tratados. Como o Dataform não está acessível, usei o DBT que, se não me engano, é similar.
 
----
 
-### Sources
+## Sources
 
 Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato com as tabelas do 'dataset' público **crypto_ethereum**, neles:
 - Selecionei apenas colunas que achei necessárias
@@ -17,7 +16,7 @@ Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato
 ![image](https://user-images.githubusercontent.com/37453518/165271661-988aaf0f-e58c-421b-be76-ef10f4940e4a.png)
 ![image](https://user-images.githubusercontent.com/37453518/165272549-11b83a47-7d50-412c-b5ad-3f731f7ff04c.png)
 
-### Tabelas de fatos
+## Tabelas de fatos
 
 Temos 3 tabelas de fatos. Para os blocos, contratos e as duas mescladas para quando existem contratos em blocos, ou seja, um INNER JOIN em `block_number`.
 Nelas:
@@ -43,6 +42,11 @@ Nelas:
 ![image](https://user-images.githubusercontent.com/37453518/165275997-77cf1bf0-fd57-4965-a8ba-e6e29d26da9c.png)
 
 ![image](https://user-images.githubusercontent.com/37453518/165276047-8f69d6cd-6adb-4ed2-85d0-3b94b1349707.png)
+
+
+
+## Análises
+Estes arquivos são apenas compilados para que sejam feitas as consultas com eles posterioremente, eles não são materializados. 
 
 
 
