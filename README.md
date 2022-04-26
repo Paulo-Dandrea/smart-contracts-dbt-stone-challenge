@@ -18,7 +18,7 @@ Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato
 
 ## Tabelas de fatos
 
-Temos 3 tabelas de fatos. Para os blocos, contratos e as duas mescladas para quando existem contratos em blocos, ou seja, um INNER JOIN em `block_number`.
+Temos 3 tabelas de fatos que consome as 'sources'. Para os blocos, contratos e as duas mescladas para quando existem contratos em blocos, ou seja, um INNER JOIN em `block_number`.
 Nelas:
 - Transformamos TIMESTAMP em DATE, já que não utilizamos HORA.
 - Configuramos ela como 'incremental', só atualizando a tabela quando o registro tiver uma DATA superior das já registradas na **nossa** tabela
@@ -46,11 +46,16 @@ Nelas:
 
 
 ## Análises
+
 Estes arquivos são apenas compilados para que sejam feitas as consultas com eles posterioremente, eles não são materializados. 
 
 
 
 ### 1. Quantos contratos (tokens) estão sendo criados por bloco?
+
+![image](https://user-images.githubusercontent.com/37453518/165278560-c455537a-3cd3-44ed-a7f2-bf01d23380fd.png)
+
+![image](https://user-images.githubusercontent.com/37453518/165187359-821998b1-9b45-45e0-ad7d-da0e0183c7a5.png)
 
 
 
