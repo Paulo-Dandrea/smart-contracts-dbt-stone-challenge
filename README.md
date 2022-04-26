@@ -58,30 +58,11 @@ Estes arquivos são apenas compilados para que sejam feitas as consultas com ele
 ![image](https://user-images.githubusercontent.com/37453518/165187359-821998b1-9b45-45e0-ad7d-da0e0183c7a5.png)
 
 
+### 3. Quantos blocos estão sendo criados em um dia?
+Para isso, optei por fazer uma VIEW e a categorizei como MART, já que este agrupamento poderia ser usado por outras queries de um mesmo time de negócios.
 
-
-
-Na tabela `crypto_ethereum.tokens`, existe a coluna `block_number`, que tem seu correspondente em `crypto_ethereum.blocks`. Acredito que se agruparmos por `block_number` e contarmos (`count()`), por exemplo, os `token_adresses`, temos a quantidade de tokens por bloco.
-
-O arquivo que responde esta pergunta é `analyses/n_tokens_per_block`:
-
-![image](https://user-images.githubusercontent.com/37453518/165186443-9dca8bdd-879e-4d05-b515-2c7b10c7aa94.png)
-
-Que tem como referência uma **tabela fato**, **incremental**, que apenas atualiza caso a data do bloco seja mais recente das que já estão na Warehouse. Aqui, também, **transformamos de TIMESTAMP para DATE**, já que não estamos precisando das horas. `models/fct/fct_tokens_cleansed.sql`:
-
-![image](https://user-images.githubusercontent.com/37453518/165186538-66d8cd9b-385e-4212-8723-db78f6f9aca6.png)
-
-Esta tabela acima, por sua vez, consome da **efêmera** `source_tokens`. Nela, alteramos os nomes de colunas e, nesta proposta, também só passamos as colunas que nos interessa. `models/src/src_tokens.sql`:
-
-![image](https://user-images.githubusercontent.com/37453518/165186671-860d16f6-8607-4253-851b-695d5f1585db.png)
-
-Temos a tabela `fct_tokens_cleansed` documentada e testada. Teste como 'not_null' e teste de relação com outra tabela. `models/schema.yml`
-
-![image](https://user-images.githubusercontent.com/37453518/165186887-d8794d3a-0ae8-4013-89f2-2436b16a5c54.png)
-
-**Resultado:**
-
-![image](https://user-images.githubusercontent.com/37453518/165187359-821998b1-9b45-45e0-ad7d-da0e0183c7a5.png)
+![image](https://user-images.githubusercontent.com/37453518/165280067-5296c6b8-6dfb-40cb-ae90-802a63188630.png)
+![image](https://user-images.githubusercontent.com/37453518/165280293-2c2f03f8-d5dd-40ad-b936-2f599eb9cf1f.png)
 
 
 
@@ -90,9 +71,11 @@ Temos a tabela `fct_tokens_cleansed` documentada e testada. Teste como 'not_null
 
 
 
+
+
+### Agendamento
 
 ![image](https://user-images.githubusercontent.com/37453518/165180098-4ca9776c-6efa-4800-8ba2-4f9e33c6364e.png)
-
 
 ![image](https://user-images.githubusercontent.com/37453518/165180682-81fbbaef-1211-456a-93f2-2c1407a02e57.png)
 
