@@ -86,7 +86,7 @@ Como o INNER JOIN da tabela só possibilita blocos que contenham tokens, basta a
 
 # Agendamento
 
-Como estou usando DBT, optei por usar DBT Cloud para o agendamento. Na segunda foto, com o histórico de eventos, temos um agendamento de hora em hora. Por que foi o histórico de um Job que fiz com uma tabela do SnowFlake, quando estava testando o DBT. 
+Como estou usando DBT, optei por usar **DBT Cloud** para o agendamento. Na segunda foto, com o histórico de eventos, temos um agendamento de hora em hora. Por que foi o histórico de um Job que fiz com uma tabela do SnowFlake, quando estava testando o DBT. Não consegui terminar o agendamento para **este** projeto por que, aparentemente, existe um bug no DBT Cloud quando se cria dois ambientes com serviços diferentes, preciso abrir um chamado com o suporte.
 
 
 ![image](https://user-images.githubusercontent.com/37453518/165180682-81fbbaef-1211-456a-93f2-2c1407a02e57.png)
