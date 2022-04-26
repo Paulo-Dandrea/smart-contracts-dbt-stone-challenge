@@ -79,10 +79,7 @@ Como o INNER JOIN da tabela só possibilita blocos que contenham tokens, basta a
 
 
 ## 4. Qual o bloco que gerou contratos (tokens) e utilizou mais taxa (gas)? Informar o nome de todos os tokens contidos neste bloco.
-
-![image](https://user-images.githubusercontent.com/37453518/165281494-f6044d17-46df-4ace-96a3-243bca4a6184.png)
-
-
+![image](https://user-images.githubusercontent.com/37453518/165282793-c7f826f5-9a29-4d3d-bf63-58e8afcf4f9f.png)
 
 
 ### Agendamento
