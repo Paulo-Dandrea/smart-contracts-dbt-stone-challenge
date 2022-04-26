@@ -18,6 +18,8 @@ Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato
 
 # Tabelas de fatos
 
+![image](https://user-images.githubusercontent.com/37453518/165180098-4ca9776c-6efa-4800-8ba2-4f9e33c6364e.png)
+
 Temos 3 tabelas de fatos que consome as 'sources'. Para os blocos, contratos e as duas mescladas para quando existem contratos em blocos, ou seja, um INNER JOIN em `block_number`.
 Nelas:
 - Transformamos TIMESTAMP em DATE, já que não utilizamos HORA.
@@ -82,9 +84,10 @@ Como o INNER JOIN da tabela só possibilita blocos que contenham tokens, basta a
 ![image](https://user-images.githubusercontent.com/37453518/165282793-c7f826f5-9a29-4d3d-bf63-58e8afcf4f9f.png)
 
 
-### Agendamento
+# Agendamento
 
-![image](https://user-images.githubusercontent.com/37453518/165180098-4ca9776c-6efa-4800-8ba2-4f9e33c6364e.png)
+Como estou usando DBT, optei por usar DBT Cloud para o agendamento. Na segunda foto, com o histórico de eventos, temos um agendamento de hora em hora. Por que foi o histórico de um Job que fiz com uma tabela do SnowFlake, quando estava testando o DBT. 
+
 
 ![image](https://user-images.githubusercontent.com/37453518/165180682-81fbbaef-1211-456a-93f2-2c1407a02e57.png)
 
