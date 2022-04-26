@@ -25,14 +25,24 @@ Nelas:
 - Configuramos ela como 'incremental', só atualizando a tabela quando o registro tiver uma DATA superior das já registradas na **nossa** tabela
 
 
+![image](https://user-images.githubusercontent.com/37453518/165274379-169236d2-8c1a-4cf3-bcda-27dddf814712.png)
+![image](https://user-images.githubusercontent.com/37453518/165274452-55a6016c-2dd5-453d-b06d-456ab582577d.png)
+![image](https://user-images.githubusercontent.com/37453518/165274509-6fa14303-3a2a-43ca-a220-e9cf1ef1cd1d.png)
 
 
+- Elas estão documentadas e testadas, seja por testes singulares (-unique -not_null) ou por macros (-positive_value -no_nulls_in_columns)
 
+![image](https://user-images.githubusercontent.com/37453518/165275524-46e6a9f2-545a-4fdc-abfb-dabcc35f63db.png)
 
+![image](https://user-images.githubusercontent.com/37453518/165275790-f1be1475-d7d5-4c7b-a7d2-5e95019c85e3.png)
 
+![image](https://user-images.githubusercontent.com/37453518/165275847-30429e24-e65d-453f-835d-8828d49ac6bc.png)
 
+![image](https://user-images.githubusercontent.com/37453518/165275943-9a087496-b6b6-49d8-8fd0-7dce0e9c06be.png)
 
+![image](https://user-images.githubusercontent.com/37453518/165275997-77cf1bf0-fd57-4965-a8ba-e6e29d26da9c.png)
 
+![image](https://user-images.githubusercontent.com/37453518/165276047-8f69d6cd-6adb-4ed2-85d0-3b94b1349707.png)
 
 
 
