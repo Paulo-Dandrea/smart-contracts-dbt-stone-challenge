@@ -74,12 +74,15 @@ E tirei a média do total de blocos criados por dia.
 Como o INNER JOIN da tabela só possibilita blocos que contenham tokens, basta apenas análise do agrupamento dos últimos 15 dias.
 
 ![image](https://user-images.githubusercontent.com/37453518/165282362-582b1a43-96b3-4405-a1aa-81a84ae807cd.png)
+![image](https://user-images.githubusercontent.com/37453518/165282473-84e11197-453b-4cba-a540-e033482b3e8b.png)
+![image](https://user-images.githubusercontent.com/37453518/165282654-a7cc0633-3c51-456e-b959-c51d7b41a4a6.png)
+
 
 ## 4. Qual o bloco que gerou contratos (tokens) e utilizou mais taxa (gas)? Informar o nome de todos os tokens contidos neste bloco.
 
 ![image](https://user-images.githubusercontent.com/37453518/165281494-f6044d17-46df-4ace-96a3-243bca4a6184.png)
 
-![image](https://user-images.githubusercontent.com/37453518/165282473-84e11197-453b-4cba-a540-e033482b3e8b.png)
+
 
 
 ### Agendamento
