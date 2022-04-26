@@ -65,8 +65,9 @@ Para isso, optei por fazer uma VIEW e a categorizei como MART, já que este agru
 ![image](https://user-images.githubusercontent.com/37453518/165280293-2c2f03f8-d5dd-40ad-b936-2f599eb9cf1f.png)
 
 
+E tirei a média do total de blocos criados por dia.
 
-
+![image](https://user-images.githubusercontent.com/37453518/165280686-f22149d9-1c4a-4eb6-b0c1-5963a4d7e8e6.png)
 
 
 
