@@ -4,13 +4,43 @@ Bem vindo à entrega do desafio do time de dados tratados.
 
 Além de entregar as queries que respondem as perguntas, me aprofundei no que **me parece** fazer parte da rotina do pessoal de dados tratados. Como o Dataform não está acessível, usei o DBT que, se não me engano, é similar.
 
-Neste Readme, vou tentar organizar por questão o que está nos códigos.
-
-Então, vamos às "Perguntas que gostaríamos de responder com nossas tabelas".
-
-
 ---
+
+### Sources
+
+Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato com as tabelas do 'dataset' público **crypto_ethereum**, neles:
+- Selecionei apenas colunas que achei necessárias
+- Renomeei colunas
+
+
+![image](https://user-images.githubusercontent.com/37453518/165271849-572daecb-71f7-449b-b9a4-d9a2eac404d1.png)
+![image](https://user-images.githubusercontent.com/37453518/165271661-988aaf0f-e58c-421b-be76-ef10f4940e4a.png)
+![image](https://user-images.githubusercontent.com/37453518/165272549-11b83a47-7d50-412c-b5ad-3f731f7ff04c.png)
+
+### Tabelas de fatos
+
+Temos 3 tabelas de fatos. Para os blocos, contratos e as duas mescladas para quando existem contratos em blocos, ou seja, um INNER JOIN em `block_number`.
+Nelas:
+- Transformamos TIMESTAMP em DATE, já que não utilizamos HORA.
+- Configuramos ela como 'incremental', só atualizando a tabela quando o registro tiver uma DATA superior das já registradas na **nossa** tabela
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 1. Quantos contratos (tokens) estão sendo criados por bloco?
+
+
+
+
 
 Na tabela `crypto_ethereum.tokens`, existe a coluna `block_number`, que tem seu correspondente em `crypto_ethereum.blocks`. Acredito que se agruparmos por `block_number` e contarmos (`count()`), por exemplo, os `token_adresses`, temos a quantidade de tokens por bloco.
 
