@@ -1,11 +1,11 @@
 Bem vindo à entrega do desafio do time de dados tratados.
 
-## Proposta para entrega
+# Proposta para entrega
 
 Além de entregar as queries que respondem as perguntas, me aprofundei no que **me parece** fazer parte da rotina do pessoal de dados tratados. Como o Dataform não está acessível, usei o DBT que, se não me engano, é similar.
 
 
-## Sources
+# Sources
 
 Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato com as tabelas do 'dataset' público **crypto_ethereum**, neles:
 - Selecionei apenas colunas que achei necessárias
@@ -16,7 +16,7 @@ Primeiramente, temos dois 'sources', CTEs efêmeros que fazem o primeiro contato
 ![image](https://user-images.githubusercontent.com/37453518/165271661-988aaf0f-e58c-421b-be76-ef10f4940e4a.png)
 ![image](https://user-images.githubusercontent.com/37453518/165272549-11b83a47-7d50-412c-b5ad-3f731f7ff04c.png)
 
-## Tabelas de fatos
+# Tabelas de fatos
 
 Temos 3 tabelas de fatos que consome as 'sources'. Para os blocos, contratos e as duas mescladas para quando existem contratos em blocos, ou seja, um INNER JOIN em `block_number`.
 Nelas:
@@ -45,20 +45,20 @@ Nelas:
 
 
 
-## Análises
+# Análises
 
 Estes arquivos são apenas compilados para que sejam feitas as consultas com eles posterioremente, eles não são materializados. 
 
 
 
-### 1. Quantos contratos (tokens) estão sendo criados por bloco?
+## 1. Quantos contratos (tokens) estão sendo criados por bloco?
 
 ![image](https://user-images.githubusercontent.com/37453518/165278560-c455537a-3cd3-44ed-a7f2-bf01d23380fd.png)
 
 ![image](https://user-images.githubusercontent.com/37453518/165187359-821998b1-9b45-45e0-ad7d-da0e0183c7a5.png)
 
 
-### 2. Quantos blocos estão sendo criados em um dia?
+## 2. Quantos blocos estão sendo criados em um dia?
 Para isso, optei por fazer uma VIEW e a categorizei como MART, já que este agrupamento poderia ser usado por outras queries de um mesmo time de negócios.
 
 ![image](https://user-images.githubusercontent.com/37453518/165280067-5296c6b8-6dfb-40cb-ae90-802a63188630.png)
@@ -70,15 +70,16 @@ E tirei a média do total de blocos criados por dia.
 ![image](https://user-images.githubusercontent.com/37453518/165280686-f22149d9-1c4a-4eb6-b0c1-5963a4d7e8e6.png)
 
 
-### 3. Em relação aos últimos 15 dias, qual foi a variação na quantidade de blocos contendo tokens em um dia?
+## 3. Em relação aos últimos 15 dias, qual foi a variação na quantidade de blocos contendo tokens em um dia?
 Como o INNER JOIN da tabela só possibilita blocos que contenham tokens, basta apenas análise do agrupamento dos últimos 15 dias.
 
-![image](https://user-images.githubusercontent.com/37453518/165281191-ea86e544-4313-4b4a-bbdb-30ed82816db6.png)
+![image](https://user-images.githubusercontent.com/37453518/165282362-582b1a43-96b3-4405-a1aa-81a84ae807cd.png)
 
-### 4. Qual o bloco que gerou contratos (tokens) e utilizou mais taxa (gas)? Informar o nome de todos os tokens contidos neste bloco.
+## 4. Qual o bloco que gerou contratos (tokens) e utilizou mais taxa (gas)? Informar o nome de todos os tokens contidos neste bloco.
 
 ![image](https://user-images.githubusercontent.com/37453518/165281494-f6044d17-46df-4ace-96a3-243bca4a6184.png)
 
+![image](https://user-images.githubusercontent.com/37453518/165282473-84e11197-453b-4cba-a540-e033482b3e8b.png)
 
 
 ### Agendamento
