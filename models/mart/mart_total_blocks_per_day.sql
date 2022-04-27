@@ -1,5 +1,3 @@
-{# Aqui deveria mesmo ser um Mart? Se fosse uma Mart, devereria ser um view?  #}
-
 SELECT
     COUNT(block_number) AS total_blocks,
     block_date
