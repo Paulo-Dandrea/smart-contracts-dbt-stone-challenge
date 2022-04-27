@@ -1,4 +1,3 @@
-{# Poderia fazer uma limpeza aqui, como dar nome a fileiras nulas #}
 {{ config(
     materialized = 'incremental',
     on_schema_change = 'fail',
